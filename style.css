@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;/*define o layout da página como flexível*/
+    min-height: 100vh;/*define a altura maxima que o conteudo pode ocupar na tela*/
+}
+
+.sidebar{/*controle da barra de navegação da esquerda*/
+    width: 250px;/*controle da largura da barra lateral esquerda*/
+    background-color: chocolate;/*cor de fundo da barra lateral esquerda*/
+    padding: 20px;/*controle do preenchimento da barra lateral esquerda(ajusta a margemda barra)*/
+    color: white;/*cor do texto da barra lateral esquerda*/
+    text-shadow: 1px 1px 2px black;/*controle da sombra do texto da barra lateral esquerda*/
+}
+
+.content{/*conteúdo principal do site na direita*/
+    flex: 1;/*controle do tamanho do conteúdo principal da direita(faz com que ele ocupe o espaço disponível se colocar 0 ele passa o conteúdo pro formato padrão colado na esquerda)*/
+    background-color: white;/*cor de fundo do conteúdo principal da direita*/
+    padding: 30px;/*controle do preenchimento do conteúdo principal da direita(ajusta a margem do conteúdo)*/
+}
