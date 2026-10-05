@@ -1,0 +1,26 @@
+{
+  "name": "databaseprojectmult",
+  "version": "1.0.0",
+  "description": "A project by students Raphael, Kayky, Renata, Sayuri, Carlos, and Matheus, focused on putting into practice the knowledge gained so far in Mult's \"Trilhas do Futuro\" course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/consun-del/DatabaseProjectMult.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/consun-del/DatabaseProjectMult/issues"
+  },
+  "homepage": "https://github.com/consun-del/DatabaseProjectMult#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  }
+}
