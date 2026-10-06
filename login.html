@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"><!--link para o arquivo CSS("style.css")-->
+    <title>Login</title>
+</head>
+<body>
+    <div class="contentlogin"><!--Elementos do container de login-->
+        <h1>Login</h1><!--Texto principal da página de login-->
+        <form action="index.html" method="get"><!--RAFAAAAAAAAEL essa parte é a parte que vai passa os dados para você no java, ela esta definido mandar para a página principal, você tem que mudar depois ficando "<form id="loginForm" action="#" sendo "LoginForm" o seu referêncial">-->
+            <label for="username">Usuário:</label><!--Label para o campo de usuário-->
+            <input type="text" id="username" name="username" required><!--Campo de entrada para o nome de usuário, obrigatório-->
+            <label for="password">Senha:</label><!--Label para o campo de senha-->
+            <input type="password" id="password" name="password" required><!--Campo de entrada para a senha, obrigatório-->
+            <a href="index.html">Não tem uma conta? Cadastre-se</a><!--Link para a página de recuperação de senha-->
+            <button type="submit">Entrar</button><!--Botão para enviar o formulário de login-->
+        </form>
+    </div>
+    
+</body>
+</html>
