@@ -11,7 +11,8 @@ const db = new slqlite3.Database('./database.db', (err) => {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL, 
             preco REAL NOT NULL,
-            estoque INTEGER NOT NULL
+            estoque INTEGER NOT NULL,
+            email TEXT NOT NULL UNIQUE
         )`);
     }
 });
