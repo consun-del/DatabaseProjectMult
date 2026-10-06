@@ -1,26 +1,10 @@
-const express = require('express');
-const cors = require('cors');
-const db = require('./database/database');
+const express = require(`express`); // Ele faz acontecer...
+const cors = require(`cors`); // Guarda de transito chato
+const app =  express(); // Dando vida para o site
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(cors()); 
+app.use(express.json()); // Ensinando o site a funcionar corretamente
 
-app.get('/', (req, res) => {
-    res.json({ status: "Servidor Ativo!" });
-});
+app.get('/api/status', (req, res)  => {res.json({mensagem: "Desculpe, mas o servidor está funcionando corretamente!"}); });
 
-app.get('/produtos', (req, res) => {
-    db.all('SELECT * FROM produtos', [], (err, rows) => {
-        if (err) {
-            res.status(500).json({ error: err.message});
-            return;
-        }
-        res.json(rows);
-    })
-});
-
-const PORTA = 3000;
-app.listen(PORTA, () => {
-    console.log(`Servidor rodando em http://localhost:${PORTA}`);
-});
+app.listen(3000, () => console.log('Servidor rodando na porta 3000!'));
