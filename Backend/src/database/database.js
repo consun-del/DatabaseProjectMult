@@ -14,11 +14,11 @@ db.run('PRAGMA foreign_keys = ON', (err) => {
 const queryCriarCliente = `
     CREATE TABLE IF NOT EXISTS clientes (
         id_cliente INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-        nome_cliente VARCHAR(100) NOT NULL,
-        email_cliente VARCHAR(100) UNIQUE NOT NULL,
-        senha_cliente VARCHAR(100) NOT NULL,
-        n_contato_cliente VARCHAR(14) NOT NULL,
-        cpf VARCHAR(14) UNIQUE NOT NULL
+        nome_cliente VARCHAR(100),
+        email_cliente VARCHAR(100) UNIQUE,
+        senha_cliente VARCHAR(100),
+        n_contato_cliente VARCHAR(14) ,
+        cpf VARCHAR(14) UNIQUE
     );
 `;
 
