@@ -8,3 +8,5 @@ app.use(express.json()); // Ensinando o site a funcionar corretamente
 app.get('/api/status', (req, res)  => {res.json({mensagem: "Desculpe, mas o servidor está funcionando corretamente!"}); });
 
 app.listen(3000, () => console.log('Servidor rodando na porta 3000!'));
+
+const db = require('./database/database.js');
