@@ -67,28 +67,88 @@ body{
 /*area separada para index.html(parte principal da loja)*/
 
 .downbar{/*controle da barra de navegação da de baixo*/
+    left: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/
+    right: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/
     width: 100%;/*define a largura da barra inferior como 100% da tela*/
     position: fixed;/*define a posição da barra inferior como fixa*/
     bottom: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/ 
-    background-color:lightcyan;/*cor de fundo da barra inferior*/
+    
+    background-color: white;/*cor de fundo da barra inferior*/
+    border-top: 1px groove lightcyan;/*controle da borda da barra inferior*/
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);/*controle da sombra da barra inferior*/
     padding: 10px;/*controle do preenchimento da barra inferior*/
     color: black;/*cor do texto da barra inferior*/
     text-shadow: 1px 1px 2px black;/*controle da sombra do texto da barra inferior*/
+    z-index: 1000;/*define a ordem de empilhamento da barra inferior como 1000*/
+
+    display: flex;/*define o layout da barra inferior como flexível*/
+    justify-content: space-evenly;/*define o alinhamento do conteúdo da barra inferior como centralizado*/
+    align-items: center;/*define o alinhamento dos itens da barra inferior como centralizado*/
 }
+
+.navigation{
+    display: flex;/*define o layout da barra de navegação como flexível*/
+    flex-direction: column;/*define a direção do layout da barra de navegação como vertical*/
+    align-items: center;/*define o alinhamento dos itens da barra de navegação como centralizado*/
+    text-decoration: none;/*define a decoração do texto da barra de navegação como nenhuma*/
+    color: #555555;/*define a cor do texto da barra de navegação como cinza escuro*/
+    font-size: 0.9rem;/*define o tamanho da fonte do texto da barra de navegação como 0.9rem*/
+    font-weight: 600;/*define a espessura da fonte do texto da barra de navegação como negrito*/
+    font-family: sans-serif;
+    padding: 6px 20px;
+    border-radius: 8px;
+    transition: all 0.2 ease;
+    gap: 4px;
+}
+.navigation-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    margin-bottom: 2px;
+    display: block;
+    transition: opacity 0.2 ease;
+}
+
+.navigation:hover,
+.navigation:active{
+    color: lightblue;
+    background-color: lightgrey;
+}
+
+
 
 .content{/*conteúdo principal do site na direita*/
     flex: 1;/*controle do tamanho do conteúdo principal da direita(faz com que ele ocupe o espaço disponível se colocar 0 ele passa o conteúdo pro formato padrão colado na esquerda)*/
     background-color: lightskyblue;/*cor de fundo do conteúdo principal da direita*/
-    padding: 30px;/*controle do preenchimento do conteúdo principal da direita(ajusta a margem do conteúdo)*/
+    padding: 8px;/*controle do preenchimento do conteúdo principal da direita(ajusta a margem do conteúdo)*/
 }
 .productsgrid{/*controle do grid de produtos*/
-    display:grid;/*define o layout do grid de produtos como grade*/
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*define o número de colunas do grid de produtos com base no tamanho da tela(mude o "300px" para ajustar o tamanho mínimo das colunas)*/
+    display:flex;/*define o layout do grid de produtos como grade*/
+    gap: 20px;/*define o espaçamento entre os produtos do grid de produtos*/
     margin-top: 40px;/*define a margem superior do grid de produtos*/ 
-    row-gap: 20px;/*define o espaçamento vertical entre os produtos*/   
-    column-gap: 20px;/*define o espaçamento horizontal entre os produtos*/
+    margin-bottom: 30px;/*define a margem inferior do grid de produtos*/
+    overflow-x: auto;/*define a barra de rolagem horizontal do grid de produtos*/
+    padding-bottom: 10px;/*define o preenchimento inferior do grid de produtos*/
+    scrollsnap-type: x mandatory;/*define o tipo de rolagem do grid de produtos como obrigatória na horizontal*/
+    scrollbar-width: auto;/*define a largura da barra de rolagem do grid de produtos como fina*/
+    scrollbar-color: lightcyan lightgray;/*define a cor da barra de rolagem do grid de produtos como chocolate e lightgray*/
+}
+.productsgrid::-webkit-scrollbar-track{/*controle da barra de rolagem do grid de produtos*/
+    background-color: lightgray;/*define a cor da barra de rolagem do grid de produtos como lightgray*/
+    border-radius: 10px;/*define o raio da borda da barra de rolagem do grid de produtos*/
+}
+.productsgrid::-webkit-scrollbar-thumb{/*controle do polegar da barra de rolagem do grid de produtos*/
+    background-color: lightcyan;/*define a cor do polegar da barra de rolagem do grid de produtos como lightcyan*/
+}
+.productsgrid::-webkit-scrollbar{/*controle da barra de rolagem do grid de produtos*/
+    display: block;/*define a exibição da barra de rolagem do grid de produtos como bloco*/
+    height: 8px;/*define a altura da barra de rolagem do grid de produtos como 8px*/
 }
 .productstyle{ /*controle do estilo de cada produto individual*/
+    flex: 0 0 200px;/*define o tamanho de cada produto individual como 200px de largura e altura automática*/
+    width: 260px;/*define a largura de cada produto individual como 200px*/
+    min-height: 0;/*define a altura mínima de cada produto individual como 0*/
+    scroll-snap-align: start;/*define o alinhamento do produto individual como início*/
     background-color: #f5f5f5;/*define a cor de fundo de cada produto individual*/
     border: 10px groove lightcyan;/*define a borda de cada produto individual*/
     border-radius: 5px;/*define o raio da borda de cada produto individual*/
@@ -99,17 +159,17 @@ body{
 
 }
 .productstyle:hover{/*define o efeito de transformação dos produtos quando o mouse passa por cima*/
-    transform: scale(1.05);/*efeito de aumento do tamanho dos produtos quando o mouse passa por cima*/
+    transform: scale(1.02);/*efeito de aumento do tamanho dos produtos quando o mouse passa por cima*/
 }
 .productstyle img{/*configuração da imagem dos produtos*/
-    max-width: 260px;/*define a largura máxima da imagem dos produtos*/
-    height: 180px;/*define a altura da imagem dos produtos*/
+    max-width: 100%;/*define a largura máxima da imagem dos produtos*/
+    height: 160px;/*define a altura da imagem dos produtos*/
     object-fit: cover;/*define como a imagem dos produtos deve se ajustar ao espaço disponível(definido para cobrir o espaço)*/
     border-radius: 8px;/*define o tamanho da borda da imagem dos produtos*/
 }
 .productstyle h3{/*configuração do título dos produtos*/
     margin-top: 10px;/*define a margem superior do título dos produtos*/
-    font-size: 18px;/*define o tamanho da fonte do título dos produtos*/
+    font-size: 0.85rem;/*define o tamanho da fonte do título dos produtos*/
     color: #333;/*define a cor da fonte do título dos produtos*/
     white-space: nowrap;/*define que o título dos produtos não deve ultrapassar o espaço disponível*/
     overflow: hidden;/*esconde o conteúdo que ultrapassa o espaço disponível*/
