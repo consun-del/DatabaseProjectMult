@@ -13,7 +13,7 @@ body{
 
 .contentlogin{/*controle do conteúdo principal da aba de login*/  
     flex: 1;/*controle do tamanho do conteúdo principal da aba de login(faz com que ele ocupe o espaço disponível se colocar 0 ele passa o conteúdo pro formato padrão colado na esquerda)*/
-    background-color: white;/*cor de fundo do conteúdo principal da aba de login*/
+    background-color: darkgray;/*cor de fundo do conteúdo principal da aba de login*/
     padding: 30px;/*controle do preenchimento do conteúdo principal da aba de login(ajusta a margem do conteúdo)*/
 }
 
@@ -23,9 +23,9 @@ body{
     max-width: 700px;/*define a largura máxima do formulário da aba de login*/
     margin: 0 auto;/*centraliza o formulário da aba de login na tela*/
     padding: 30px;/*controle do preenchimento do formulário da aba de login(ajusta a margem do conteúdo)*/
-    border: 10px groove chocolate;/*define a borda do formulário da aba de login*/
+    border: 10px groove lightslategray;/*define a borda do formulário da aba de login*/
     border-radius: 5px;/*define o raio da borda do formulário da aba de login*/
-    background-color: chocolate;/*define a cor de fundo do formulário da aba de login*/
+    background-color: lightslategray;/*define a cor de fundo do formulário da aba de login*/
     row-gap: 20px;/*define o espaçamento vertical entre os elementos do formulário da aba de login*/
 
 }
@@ -33,32 +33,32 @@ body{
 .contentlogin h1{/*controle do título da aba de login*/
     text-align: center;/*define o alinhamento do título da aba de login*/
     margin-bottom: 20px;/*define a margem inferior do título da aba de login*/
-    color: #e74c3c;/*define a cor do título da aba de login*/
+    color: #1a1a1a;/*define a cor do título da aba de login*/
     text-shadow: 1px 1px 2px black;/*controle da sombra do título da aba de login*/
 }
 
 .contentlogin label{/*controle dos rótulos do formulário da aba de login*/
     font-size: 1.2rem;/*define o tamanho da fonte dos rótulos do formulário da aba de login*/
     margin-bottom: 5px;/*define a margem inferior dos rótulos do formulário da aba de login*/
-    color: white;/*define a cor dos rótulos do formulário da aba de login*/
+    color: black;/*define a cor dos rótulos do formulário da aba de login*/
 }
 
 .contentlogin a{
-    color:white
+    color:black
 }
 
 .contentlogin button{/*controle do botão de envio do formulário da aba de login*/
     padding: 10px;/*define o preenchimento do botão de envio do formulário da aba de login*/
-    background-color: #e74c3c;/*define a cor de fundo do botão de envio do formulário da aba de login*/
+    background-color: #000000;/*define a cor de fundo do botão de envio do formulário da aba de login*/
     color: white;/*define a cor do texto do botão de envio do formulário da aba de login*/
-    border: 10px groove #e74c3c;/*define a borda do botão de envio do formulário da aba de login*/
+    border: 10px groove black;/*define a borda do botão de envio do formulário da aba de login*/
     border-radius: 5px;/*define o raio da borda do botão de envio do formulário da aba de login*/
     cursor: pointer;/*define o cursor como ponteiro ao passar o mouse sobre o botão de envio do formulário da aba de login*/
     transition: background-color 0.3s ease;/*define a transição da cor de fundo do botão de envio do formulário da aba de login*/
 }
 
 .contentlogin button:hover{/*controle do efeito de hover do botão de envio do formulário da aba de login*/
-    background-color: #c0392b;/*define a cor de fundo do botão de envio do formulário da aba de login ao passar o mouse sobre ele*/
+    background-color: rgb(118, 136, 136);/*define a cor de fundo do botão de envio do formulário da aba de login ao passar o mouse sobre ele*/
     scale: 1.01;/*define o efeito de aumento do botão de envio do formulário da aba de login ao passar o mouse sobre ele*/
 }
 
@@ -70,15 +70,15 @@ body{
     width: 100%;/*define a largura da barra inferior como 100% da tela*/
     position: fixed;/*define a posição da barra inferior como fixa*/
     bottom: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/ 
-    background-color: chocolate;/*cor de fundo da barra inferior*/
+    background-color:lightcyan;/*cor de fundo da barra inferior*/
     padding: 10px;/*controle do preenchimento da barra inferior*/
-    color: white;/*cor do texto da barra inferior*/
+    color: black;/*cor do texto da barra inferior*/
     text-shadow: 1px 1px 2px black;/*controle da sombra do texto da barra inferior*/
 }
 
 .content{/*conteúdo principal do site na direita*/
     flex: 1;/*controle do tamanho do conteúdo principal da direita(faz com que ele ocupe o espaço disponível se colocar 0 ele passa o conteúdo pro formato padrão colado na esquerda)*/
-    background-color: white;/*cor de fundo do conteúdo principal da direita*/
+    background-color: lightskyblue;/*cor de fundo do conteúdo principal da direita*/
     padding: 30px;/*controle do preenchimento do conteúdo principal da direita(ajusta a margem do conteúdo)*/
 }
 .productsgrid{/*controle do grid de produtos*/
@@ -90,7 +90,7 @@ body{
 }
 .productstyle{ /*controle do estilo de cada produto individual*/
     background-color: #f5f5f5;/*define a cor de fundo de cada produto individual*/
-    border: 10px groove #e74c3c;/*define a borda de cada produto individual*/
+    border: 10px groove lightcyan;/*define a borda de cada produto individual*/
     border-radius: 5px;/*define o raio da borda de cada produto individual*/
     padding: 10px;/*define o quanto do quadrado a imagem vai preencher de cada produto individual*/
     text-align: center;/*define o alinhamento do texto de cada produto individual*/
