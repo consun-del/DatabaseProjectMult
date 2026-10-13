@@ -15,7 +15,12 @@
                     <img src="https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_SX679_.jpg" alt="Produto 1" class="product1"><!--Imagem do produto 1-->
                     <h3>AMD Processador de desktop Ryzen 7 7800X3D 8 núcleos, 16 threads</h3><!--Descrição do produto 1-->
                     <p class="price">R$ 699,99</p><!--Preço do produto 1-->
-                    <button class="bnt" onclick="modal('AMD Processador de desktop Ryzen 7 7800X3D 8 núcleos','R$ 699.99','proce.jpg')"></button>
+                    <button onclick="document.getElementById('prod1').showModal()" class="botao">Ver detalhes</button>
+                    <dialog id="prod1" class="Modal">
+                        <h2>fhauhf</h2>
+                         <img src="https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_SX679_.jpg" alt="Produto 1" class="product1"><!--Imagem do produto 1-->
+                        <button onclick="document.getElementById('prod1').close()" class="botao">Fechar</button>
+                    </dialog>
                 </div>
                 <!--Produto 2-->
                 <div class="productstyle">
