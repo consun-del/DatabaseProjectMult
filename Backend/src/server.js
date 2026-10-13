@@ -41,7 +41,7 @@ app.post('/api/login', (req, res) => {
             res.status(500).json({mensagem : "Erro no Banco de Dados"})
         }
         else if (!cliente) {
-            res.status(401).json({mensagem : "Paramentros não encontrados."})
+            res.status(401).json({mensagem : "Senha o Email incorretos."})
         }
         else {
             console.log("Sucesso no Login.");
