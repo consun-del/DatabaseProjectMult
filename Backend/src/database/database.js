@@ -113,7 +113,7 @@ db.run(queryCriarIntensPedidos, (err) => {
         console.error("Database itens pedidos Falha.", err.message)
     } 
     else {
-        console.log("Database intes pedidos Sucesso.")
+        console.log("Database itens pedidos Sucesso.")
     };
 });
 

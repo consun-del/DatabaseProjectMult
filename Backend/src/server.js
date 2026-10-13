@@ -18,7 +18,7 @@ app.post('/api/cadastro', (req, res) => {
 
     const QueryInserir = `INSERT INTO clientes (nome_cliente, email_cliente, senha_cliente, cpf, n_contato_cliente) VALUES (?, ?, ?, ?, ?)`;
 
-    db.run(QueryInserir, [nome_cliente, email_cliente, senha_cliente, cpf_cliente, n_contato_cliente], (err) => { 
+    db.run(QueryInserir, [nome_cliente, email_cliente, senha_cliente, cpf, n_contato_cliente], (err) => { 
         if (err) {
             console.error("Erro ao registrar o cliente no Banco de Dados!", err.message);
             res.status(500).json({mensagem : "Erro ao registrar o cliente no Banco de Dados!"});
