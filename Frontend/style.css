@@ -66,6 +66,37 @@ body{
 
 /*area separada para index.html(parte principal da loja)*/
 
+.botao{
+    background-color: lightblue;
+    border: 5px double lightgrey;
+}
+
+.Modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    height: 550px;
+    width: 800px;
+}
+
+.Modal button{
+    margin-left: 80%;
+    margin-top: 280px;
+}
+
+.Modal h2{
+    margin-left: 550px;
+    font-size: 0.85rem;
+     white-space: nowrap;
+
+}
+.Modal img{
+    margin-right: 60%;
+    margin-top: 50px;
+}
+
 .downbar{/*controle da barra de navegação da de baixo*/
     left: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/
     right: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/
@@ -166,6 +197,8 @@ body{
     height: 160px;/*define a altura da imagem dos produtos*/
     object-fit: cover;/*define como a imagem dos produtos deve se ajustar ao espaço disponível(definido para cobrir o espaço)*/
     border-radius: 8px;/*define o tamanho da borda da imagem dos produtos*/
+    transition: transform  0.3s ease;
+    will-change: transform;
 }
 .productstyle h3{/*configuração do título dos produtos*/
     margin-top: 10px;/*define a margem superior do título dos produtos*/
