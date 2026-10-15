@@ -69,6 +69,7 @@ body{
 .botao{
     background-color: lightblue;
     border: 5px double lightgrey;
+    cursor: pointer;
 }
 
 .Modal{
@@ -81,21 +82,44 @@ body{
     width: 800px;
 }
 
-.Modal button{
-    margin-left: 80%;
-    margin-top: 280px;
+.Modal-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.Prod-info{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
-.Modal h2{
-    margin-left: 550px;
-    font-size: 0.85rem;
-     white-space: nowrap;
+.Prod-img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+    margin-left: 55px;
+    margin-top: 55px;
+}
 
+
+.Prod-text h2{
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+    color: #222;
+    margin-top: 20px;
+    margin-left: 100px;
 }
-.Modal img{
-    margin-right: 60%;
-    margin-top: 50px;
+
+.Prod-descri{
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+    margin-left: 100px;
 }
+
 
 .downbar{/*controle da barra de navegação da de baixo*/
     left: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/
