@@ -73,53 +73,85 @@ body{
 }
 
 .Modal{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
+    margin: auto;
     height: 550px;
     width: 800px;
+    display: flex;
+    flex-direction: column;
+    border: 5px groove skyblue;
 }
 
 .Modal-content{
     display: flex;
     flex-direction: column;
     gap: 24px;
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
 }
 .Prod-info{
     display: flex;
     gap: 20px;
     align-items: flex-start;
+    flex: 1;
+    min-height: 0;
 }
 
 .Prod-img{
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
     border-radius: 8px;
     flex-shrink: 0;
-    margin-left: 55px;
-    margin-top: 55px;
+    margin: 0;
 }
 
-
+.Prod-text {
+    flex: 1;
+    min-width: 0;
+    margin: 0 0 8px 0;
+}
 .Prod-text h2{
     margin: 0 0 8px 0;
     font-size: 1.4rem;
     color: #222;
+    margin-top: 0px;
+}
+.Prod-text h3{
+    margin: 0 0 8px 0;
+    font-size: 1.4rem;
+    color: #222;
+    margin-top: 10px;
+    border-top: 1px solid #c2c2c2;
+}
+.Prod-text .price{/*configuração do preço dos produtos*/
+    font-size: 1.8rem;/*define o tamanho da fonte do preço dos produtos*/
+    margin-top: 5px;/*define a margem superior do preço dos produtos*/
+    font-weight: bold;/*ajusta a espessura da fonte do preço dos produtos*/
+    color: #e74c3c;/*define a cor da fonte do preço dos produtos*/
     margin-top: 20px;
-    margin-left: 100px;
+    border-bottom: 1px solid #c2c2c2;
+}
+.Prod-text p{
+    margin-top: 30px;
 }
 
 .Prod-descri{
     font-size: 0.95rem;
-    color: #666;
+    color: #000000;
     line-height: 1.5;
     margin: 0;
-    margin-left: 100px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
+.dialog-footer{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    margin-right: 0px;
+    border-top: 1px solid #eee;
+}
 
 .downbar{/*controle da barra de navegação da de baixo*/
     left: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/

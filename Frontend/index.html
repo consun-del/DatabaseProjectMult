@@ -14,21 +14,8 @@
                 <div class="productstyle">
                     <img src="https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_SX679_.jpg" alt="Produto 1" class="product1"><!--Imagem do produto 1-->
                     <h3>AMD Processador de desktop Ryzen 7 7800X3D 8 núcleos, 16 threads</h3><!--Descrição do produto 1-->
-                    <p class="price">R$ 699,99</p><!--Preço do produto 1-->
+                    <p class="price">R$ 1.999,99</p><!--Preço do produto 1-->
                     <button onclick="document.getElementById('prod1').showModal()" class="botao">Ver detalhes</button>
-                    <dialog id="prod1" class="Modal">
-                        <div class="Modal-content">
-                            <div class="Prod-info">
-                                   <img src="https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_SX679_.jpg" alt="Produto 1" class="Prod-img"><!--Imagem do produto 1-->
-                                   <div class="Prod-text">
-                                    <h2>AMD Processador de desktop Ryzen 7 7800X3D 8 núcleos, 16 threads</h2>
-                                    <p class="Prod-descri">Descrição do produto</p>
-
-                                   </div>
-                            </div>
-                        </div>
-                        <button onclick="document.getElementById('prod1').close()" class="botao">Fechar</button>
-                    </dialog>
                 </div>
                 <!--Produto 2-->
                 <div class="productstyle">
@@ -114,5 +101,33 @@
             <span class="label">Carrinho</span>
         </a>
     </footer>
+    <!--seção das caixas de descrição dos produtos-->
+     <dialog id="prod1" class="Modal">
+        <div class="Modal-content">
+            <div class="Prod-info">
+                <img src="https://m.media-amazon.com/images/I/51HqC0rU9HL._AC_SX679_.jpg" alt="Produto 1" class="Prod-img"><!--Imagem do produto 1-->
+                <div class="Prod-text">
+                <h2>AMD Processador de desktop Ryzen 7 7800X3D 8 núcleos, 16 threads</h2>
+                <p class="price">R$ 1.999,99</p>
+                <p class="Prod-descri">Estilo: Processador</p>
+                <p class="Prod-descri">Marca: AMD</p>
+                <p class="Prod-descri">Fabricante da CPU: AMD</p>
+                <p class="Prod-descri">Modelo da CPU: Ryzen 7</p>
+                <p class="Prod-descri">Velocidade do CPU: 4,2 GHz</p>
+                <p class="Prod-descri">Soquete da CPU: Socket AM5</p>
+                <h3>Sobre este item:</h3>
+                <p class="Prod-descri">O melhor processador de jogos</p>
+                <p class="Prod-descri">8 núcleos e 16 threads de processamento, combinados com um enorme 100 MB de cache</p>
+                <p class="Prod-descri"></p>
+                <p class="Prod-descri"></p>
+                <p class="Prod-descri"></p>
+                <p class="Prod-descri"></p>
+                </div>
+                </div>
+             </div>
+        <div class="dialog-footer">
+            <button onclick="document.getElementById('prod1').close()" class="botao">Fechar</button> 
+        </div>
+    </dialog>
 </body>
 </html>
