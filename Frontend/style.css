@@ -66,6 +66,7 @@ body{
 
 /*area separada para index.html(parte principal da loja)*/
 
+/*Area do dialog*/
 .botao{
     background-color: lightblue;
     border: 5px double lightgrey;
@@ -76,7 +77,6 @@ body{
     margin: auto;
     height: 550px;
     width: 800px;
-    display: flex;
     flex-direction: column;
     border: 5px groove skyblue;
 }
@@ -104,6 +104,9 @@ body{
     border-radius: 8px;
     flex-shrink: 0;
     margin: 0;
+}
+.Prod-img:hover{
+    transform: scale(1.03);
 }
 
 .Prod-text {
@@ -151,7 +154,12 @@ body{
     padding-top: 15px;
     margin-right: 0px;
     border-top: 1px solid #eee;
+    z-index: 1000;
+    bottom: 0;
+    
 }
+
+/* area principal*/
 
 .downbar{/*controle da barra de navegação da de baixo*/
     left: 0;/*define a posição da barra inferior como fixa na parte inferior da tela*/
@@ -269,4 +277,13 @@ body{
     margin-top: 5px;/*define a margem superior do preço dos produtos*/
     font-weight: bold;/*ajusta a espessura da fonte do preço dos produtos*/
     color: #e74c3c;/*define a cor da fonte do preço dos produtos*/
+}
+
+.Rodape{
+    display: flex;
+    padding-top: 15px;
+    margin-right: 0px;
+    border-top: 1px solid #eee;
+    font-size: 30px;
+    margin-bottom: 100px;
 }
